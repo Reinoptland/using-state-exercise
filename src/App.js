@@ -24,6 +24,10 @@ function App() {
     setScore(score / 2);
   }
 
+  function resetScore() {
+    setScore(0);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -38,7 +42,7 @@ function App() {
             <button onClick={plusFive}>+ 5</button>
             <button onClick={minusFive}>- 5</button>
             <button onClick={halfScore}>half score</button>
-            <button>reset</button>
+            <button onClick={resetScore}>reset</button>
           </div>
         </div>
         <div>
