@@ -12,6 +12,10 @@ function App() {
     setScore(score - 1);
   }
 
+  function plusFive() {
+    setScore(score + 5);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -23,7 +27,7 @@ function App() {
           <div class="buttons">
             <button onClick={plusOne}>+ 1</button>
             <button onClick={minusOne}>- 1</button>
-            <button>+ 5</button>
+            <button onClick={plusFive}>+ 5</button>
             <button>- 5</button>
             <button>half score</button>
             <button>reset</button>
