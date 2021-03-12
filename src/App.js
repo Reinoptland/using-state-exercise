@@ -1,5 +1,4 @@
 import { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
@@ -7,6 +6,10 @@ function App() {
 
   function plusOne() {
     setScore(score + 1);
+  }
+
+  function minusOne() {
+    setScore(score - 1);
   }
 
   return (
@@ -19,7 +22,7 @@ function App() {
           </div>
           <div class="buttons">
             <button onClick={plusOne}>+ 1</button>
-            <button>- 1</button>
+            <button onClick={minusOne}>- 1</button>
             <button>+ 5</button>
             <button>- 5</button>
             <button>half score</button>
