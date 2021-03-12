@@ -1,3 +1,4 @@
+import TeamScore from "./components/TeamScore";
 import { useState } from "react";
 import "./App.css";
 
@@ -33,32 +34,8 @@ function App() {
             <button onClick={resetScore}>reset</button>
           </div>
         </div>
-        <div>
-          <div>
-            <p class="counter counter--red">Team red: 0</p>
-          </div>
-          <div class="buttons">
-            <button>+ 1</button>
-            <button>- 1</button>
-            <button>+ 5</button>
-            <button>- 5</button>
-            <button>half score</button>
-            <button>reset</button>
-          </div>
-        </div>
-        <div>
-          <div>
-            <p class="counter counter--pink">Team pink: 0</p>
-          </div>
-          <div class="buttons">
-            <button>+ 1</button>
-            <button>- 1</button>
-            <button>+ 5</button>
-            <button>- 5</button>
-            <button>half score</button>
-            <button>reset</button>
-          </div>
-        </div>
+        <TeamScore teamColor="red" />
+        <TeamScore teamColor="pink" />
       </header>
     </div>
   );
