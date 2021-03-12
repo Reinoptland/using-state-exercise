@@ -4,20 +4,8 @@ import "./App.css";
 function App() {
   const [score, setScore] = useState(0);
 
-  function plusOne() {
-    setScore(score + 1);
-  }
-
-  function minusOne() {
-    setScore(score - 1);
-  }
-
-  function plusFive() {
-    setScore(score + 5);
-  }
-
-  function minusFive() {
-    setScore(score - 5);
+  function changeScore(number) {
+    setScore(score + number);
   }
 
   function halfScore() {
@@ -37,10 +25,10 @@ function App() {
             <p class="counter counter--blue">Team blue: {score}</p>
           </div>
           <div class="buttons">
-            <button onClick={plusOne}>+ 1</button>
-            <button onClick={minusOne}>- 1</button>
-            <button onClick={plusFive}>+ 5</button>
-            <button onClick={minusFive}>- 5</button>
+            <button onClick={() => changeScore(1)}>+ 1</button>
+            <button onClick={() => changeScore(-1)}>- 1</button>
+            <button onClick={() => changeScore(5)}>+ 5</button>
+            <button onClick={() => changeScore(-5)}>- 5</button>
             <button onClick={halfScore}>half score</button>
             <button onClick={resetScore}>reset</button>
           </div>
